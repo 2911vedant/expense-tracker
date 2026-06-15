@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>💰 Tracker</h2>
+    <p>Dashboard</p>
+    <p>Add Expense</p>
+  </div>
+
+  <!-- Main -->
+  <div class="main">
+
+    <h1>Dashboard</h1>
+
+    <!-- Cards -->
+    <div class="cards">
+      <div class="card">Budget: ₹<span id="budgetDisplay">0</span></div>
+      <div class="card">Spent: ₹<span id="total">0</span></div>
+      <div class="card">Remaining: ₹<span id="remaining">0</span></div>
+    </div>
+
+    <!-- Add Expense -->
+    <div class="form">
+      <input type="text" id="title" placeholder="Expense name">
+      <input type="number" id="amount" placeholder="Amount">
+      <select id="category">
+        <option>Food</option>
+        <option>Transport</option>
+        <option>Shopping</option>
+        <option>Entertainment</option>
+      </select>
+      <button onclick="addExpense()">Add</button>
+    </div>
+
+    <!-- Budget -->
+    <div class="form">
+      <input type="number" id="budgetInput" placeholder="Set budget">
+      <button onclick="setBudget()">Set Budget</button>
+    </div>
+
+    <!-- Chart -->
+    <canvas id="chart"></canvas>
+
+    <!-- Expense List -->
+    <ul id="expenseList"></ul>
+
+    <!-- Alerts -->
+    <div id="alertBox"></div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
